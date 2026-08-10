@@ -51,3 +51,6 @@ SELECT COUNT(PRODUCT),NAME
 FROM DEMO1
 GROUP BY NAME
 HAVING MAX(PRICE)> 10000
+
+select price,name  from demo1 
+order by price ,name desc

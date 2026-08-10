@@ -27,6 +27,8 @@ END;
 
 ALTER TABLE STUD ADD COUNTRY VARCHAR(50)
 ALTER TABLE STUD ADD address VARCHAR(50)
+ALTER TABLE STUD ADD age int
+
 
 create trigger tr44
 on database
@@ -36,5 +38,5 @@ begin
 		print 'hello developer table dropped successfully!'
 end
 
-drop trigger tr44
+drop table stud
 
