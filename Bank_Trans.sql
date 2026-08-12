@@ -67,5 +67,5 @@ END
 
 TransferMoney @FromAccount = 101,
               @ToAccount = 105,
-              @Amount = 200000;
+              @Amount = 20000;
 
