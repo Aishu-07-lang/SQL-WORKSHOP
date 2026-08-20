@@ -1,0 +1,65 @@
+use Practise
+create table customer (custid int,name varchar(50),city varchar(50))
+
+select * from customer
+insert into customer values 
+(1,'aishu','pune'),
+(2,'kishu','mumbai'),
+(3,'akishu','solapur'),
+(4,'ak','nagpur'),
+(5,'asz','beng'),
+(6,'aj','delhi'),
+(7,'akj','solapur')
+
+create table order1 (ordid int ,product varchar(50),id int)
+insert into order1 values (101,'MI',1),
+(102,'SAMSUNG',2),
+(103,'MI',3),
+(104,'APPLE',2),
+(105,'VIVO',5)
+
+DROP TABLE ORDER1
+select * from order1
+
+SELECT * FROM CUSTOMER INNER JOIN order1 
+ON
+customer.custid = order1.id
+
+SELECT C.CUSTID ,C.NAME,C.CITY,O.ORDID,O.PRODUCT,O.ID
+FROM CUSTOMER AS C INNER JOIN ORDER1 AS O
+ON
+C.custid = O.ID
+
+SELECT A.CUSTID ,A.NAME, B.PRODUCT,ORDID,B.ID
+FROM CUSTOMER AS A JOIN ORDER1 B
+ON
+A.CUSTID =  B.ID
+
+SELECT CUSTOMER.NAME,CUSTOMER.city,ORDER1.PRODUCT ,ORDER1.ORDID 
+FROM CUSTOMER JOIN ORDER1
+ON
+CUSTOMER.custid = ORDER1.ID
+
+SELECT C.CUSTID AS CUSTOMERID ,C.NAME AS CUSTOMERNAME ,O.ORDID AS ORDERID,O.PRODUCT AS PRODUCTNAME ,O.ID AS CUSTOMERID
+FROM customer AS C INNER JOIN ORDER1 AS O
+ON 
+C.custid = O.ID
+
+SELECT C.CUSTID ,C.CITY ,C.NAME ,O.ORDID,O.PRODUCT,O.ID 
+FROM CUSTOMER AS C LEFT JOIN ORDER1 AS O
+ON
+C.CUSTID = O.ID
+ 
+SELECT C.CUSTID ,C.CITY ,C.NAME ,O.ORDID,O.PRODUCT,O.ID 
+FROM CUSTOMER AS C RIGHT JOIN ORDER1 AS O
+ON
+C.CUSTID = O.ID
+ 
+ SELECT C.CUSTID ,C.CITY ,C.NAME ,O.ORDID,O.PRODUCT,O.ID 
+FROM CUSTOMER AS C FULL OUTER JOIN ORDER1 AS O
+ON
+C.CUSTID = O.ID
+ 
+SELECT *
+FROM CUSTOMER
+CROSS JOIN ORDER1;

@@ -31,7 +31,7 @@ delete from demo where id=6
 
 truncate table demo
 drop table demo
-
+--------------clauses----------------------------------------------------
 select * from demo order by name
 select * from demo order by  name desc
 select * from demo order by id
