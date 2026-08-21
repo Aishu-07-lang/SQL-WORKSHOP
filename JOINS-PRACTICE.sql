@@ -14,4 +14,6 @@ select*from orders1
 
 select customers1.cid,orders1.oid from customers1 inner join  orders1 on customers1.cid=orders1.oid
 
- select customers1.cid ,orders1.oid from customers1 inner join orders1 on c.id=o.id
+select customers1.cid ,orders1.oid from customers1 inner join orders1 on c.id=o.id
+
+ 
