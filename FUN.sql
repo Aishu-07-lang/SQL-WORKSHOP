@@ -1,0 +1,11 @@
+ALTER function DIV1(@NUM1 as FLOAT , @NUM2 as int)
+Returns FLOAT
+As 
+Begin 
+    Return @NUM1 / @NUM2
+END
+
+SELECT DBO.DIV1(3,2)
+
+CREATE FUNCTION MULTI(@A AS INT , @B AS INT)
+RETURNS 

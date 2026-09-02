@@ -1,4 +1,6 @@
 
+Create database Functiondb
+use Functiondb
 CREATE FUNCTION CalcGST
 (
     @loanAmount DECIMAL(15,2),

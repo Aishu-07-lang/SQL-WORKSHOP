@@ -90,6 +90,14 @@ BEGIN
 
 P4 100 , 'vivo'
 
+create procedure A11
+@qty as int , @p as varchar(50)
+AS
+Begin
+        UPDATE SALE SET SALES = SALES + @QTY WHERE ITEMS = @P
+        END
+
+        A11 200, 'VIVO'
 
 
 
