@@ -1,5 +1,8 @@
 #store procedure
  #banking-
+ #inventory mngmnt
+ #medical soft
+
 
  
  create table cust2

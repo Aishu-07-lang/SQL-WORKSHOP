@@ -17,28 +17,35 @@ INSERT INTO Employee VALUES
 (105,'kishu','HR',55000,'kishu@gmail.com','2023-07-25')
 
 select * from Employee
-
-CREATE PROCEDURE HighSalaryEmployees
+ ----------------- single parameter-------------------------------
+CREATE PROCEDURE HighSalaryEmployees 
+@e as int
 AS
 BEGIN
     SELECT *
     FROM Employee
     WHERE Salary>50000;
 END;
-
+HighSalaryEmployees 3 
+--------------------without parameter-------------------
 create procedure p1
 AS 
 Begin
 Update Employee Set Salary = Salary + (Salary * 10/100)
 End
+------------------------------------------------------------------------------------
 
+
+-----------------------multi-parameter--------------------------------------------
 create procedure p2
 @p as float , @e as int
 AS 
 BEGIN
 update Employee set Salary = Salary + (Salary * @p/100) where  EmpID =@e 
 END
-
+p2 102  , 4
+------------------------------------------------------------------------------
+--------------------ineventory management--------------
 
 CREATE TABLE SALE
 (
@@ -97,7 +104,7 @@ Begin
         UPDATE SALE SET SALES = SALES + @QTY WHERE ITEMS = @P
         END
 
-        A11 200, 'VIVO'
+A11 200, 'VIVO'
 
 
 
